@@ -1,0 +1,96 @@
+.text {
+  display: inline-block;
+  vertical-align: middle;
+
+  & > svg {
+    vertical-align: middle;
+  }
+
+  // size
+  &.xlg {
+    font-size: 1.5rem;
+  }
+  &.lg {
+    font-size: 1.125rem;
+  }
+  &.xmd {
+    font-size: 1rem;
+  }
+  &.md {
+    font-size: 0.813rem;
+  }
+  &.sm {
+    font-size: 0.75rem;
+  }
+  &.xsm {
+    font-size: 0.625rem;
+  }
+
+  // font-weight
+  &.semibold {
+    font-weight: 500;
+  }
+  &.bold {
+    font-weight: 600;
+  }
+
+  &.inline {
+    display: inline;
+  }
+
+  &.uppercase {
+    text-transform: uppercase;
+  }
+  &.underline {
+    text-decoration: underline;
+  }
+
+  &.line-through {
+    text-decoration: line-through;
+  }
+
+  &.italic {
+    font-style: italic;
+  }
+
+  &.single-line {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  // align
+  &.center {
+    text-align: center;
+  }
+  &.right {
+    text-align: right;
+  }
+  &.left {
+    text-align-last: left;
+  }
+
+  //
+  &.primary {
+    color: #212121;
+  }
+  &.orange {
+    color: orange;
+  }
+  &.pink {
+    color: hotpink;
+  }
+  &.red {
+    color: red;
+  }
+  &.black {
+    color: black;
+  }
+  &.white {
+    color: white;
+  }
+  &.hover-transition {
+    transition: color linear 0.3s;
+  }
+}

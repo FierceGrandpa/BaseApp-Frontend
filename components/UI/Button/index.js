@@ -1,19 +1,48 @@
-import styles from './styles.scss';
+import { forwardRef, memo } from 'react';
 
-const Button = ({
-  caption, submit, onClick, children, ...rest
-}) => (
-  <>
+import styles from './Button.module.scss';
+
+const Button = forwardRef(
+  (
+    {
+      style,
+      className,
+      onClick,
+      onMouseDown,
+      onTouchStart,
+      submit,
+      theme,
+      children,
+      disabled,
+      align,
+      justify,
+      name,
+    },
+    ref,
+  ) => (
     <button
-      title={caption}
+      disabled={disabled}
       type={submit ? 'submit' : 'button'}
-      onClick={onClick}
-      className="button"
-      {...rest}
+      onClick={(e) => onClick && onClick(e)}
+      onMouseDown={onMouseDown}
+      onTouchStart={onTouchStart}
+      className={[
+        'button',
+        theme || '',
+        justify ? `justify-${justify}` : '',
+        align ? `align-${align}` : '',
+        className || '',
+      ].join(' ')}
+      style={style}
+      ref={ref}
+      name={name}
     >
-      {children || caption}
+      {children}
     </button>
-    <style jsx>{styles}</style>
-  </>
+  ),
 );
-export default Button;
+
+const memoizedButton = memo(Button);
+memoizedButton.displayName = 'Button';
+
+export default memoizedButton;

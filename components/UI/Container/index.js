@@ -1,8 +1,8 @@
 import styles from './styles.scss';
 
-const Container = ({ children, ...rest }) => (
+const Container = ({ children, className, ...rest }) => (
   <>
-    <div className="container" {...rest}>
+    <div className={['container', className].join(' ')} {...rest}>
       { children }
     </div>
     <style jsx>{styles}</style>

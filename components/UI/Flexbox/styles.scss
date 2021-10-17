@@ -1,23 +1,5 @@
-// Button
-//
-
-.button {
+.flexbox {
   display: flex;
-  background-color: transparent;
-  border: none;
-  justify-content: center;
-  align-items: center;
-  border-radius: 7px;
-  padding: 0;
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  &:active,
-  &:focus {
-    outline: none;
-  }
 
   &.justify {
     &-center {
@@ -29,10 +11,10 @@
     &-end {
       justify-content: flex-end;
     }
-    &-space-around {
+    &-spaceAround {
       justify-content: space-around;
     }
-    &-space-between {
+    &-spaceBetween {
       justify-content: space-between;
     }
   }
@@ -49,5 +31,29 @@
     &-stretch {
       align-items: stretch;
     }
+  }
+  &.direction {
+    &-column {
+      flex-direction: column;
+    }
+    &-columnReverse {
+      flex-direction: column-reverse;
+    }
+    &-row {
+      flex-direction: row;
+    }
+    &-rowReverse {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+  &.nowrap {
+    flex-wrap: nowrap;
+  }
+  &.wrapReverse {
+    flex-wrap: wrap-reverse;
   }
 }
